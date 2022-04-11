@@ -64,6 +64,7 @@ export const EmojiStaticKeyboard = () => {
         <>
           {enableSearchBar && <SearchBar />}
           <Animated.FlatList
+            nestedScrollEnabled={true}
             extraData={[keyboardState.recentlyUsed.length, searchPhrase]}
             data={renderList}
             keyExtractor={(item: EmojisByCategory) => item.title}
